@@ -1,2 +1,2 @@
-.venv\Scrits\activate
+#.venv/Scrits/activate
 pyTelegramBotAPI==4.26.0
