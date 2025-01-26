@@ -1,2 +1,5 @@
-#./.venv/Scripts/activate
+
+
+#.venv/Scripts/activate
+
 pyTelegramBotAPI==4.26.0
