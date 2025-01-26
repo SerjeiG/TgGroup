@@ -1,4 +1,3 @@
-#клиенты, админы, бот отправлят
 import telebot
 
 import config
@@ -17,3 +16,4 @@ def info(message):
         bot.send_message(message.chat.id, "Вы не админ")
 
 bot.infinity_polling()
+
