@@ -16,6 +16,10 @@ def info(message):
     else:
         bot.send_message(message.chat.id, "Вы не админ")
 
+@bot.massage_handler(commands=['graet'])
+def info(message):
+    bot.send_message(message.chat.id, "_________")
+
 bot.infinity_polling()
 
 
