@@ -1,6 +1,6 @@
 import telebot
-
 import config
+from telebot import types
 
 admins = [1215240396]
 clients = []
@@ -14,6 +14,11 @@ def info(message):
         help(message)
     else:
         bot.send_message(message.chat.id, "Вы не админ")
+
+@bot.message_handler(commands=['button'])
+def message_url(message):
+    import vladislav
+    vladislav.message_url(message.chat.id, "button", "Press", "https://store.steampowered.com/", bot)
 
 bot.infinity_polling()
 
