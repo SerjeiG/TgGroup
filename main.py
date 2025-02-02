@@ -1,6 +1,5 @@
-import telebot
-
-
+import telebotgit
+import arseniy
 import config
 import vladimir
 
@@ -20,7 +19,10 @@ def info(message):
     else:
         bot.send_message(message.chat.id, "Вы не админ")
 
-
+@bot.message_handler(commands=['cyber'])
+def cyber():
+    arseniy.cyber()
+    
 @bot.message_handler(commands= ['hello'])
 def hello(message):
     maria.hello(message, bot)
