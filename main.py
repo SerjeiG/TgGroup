@@ -1,4 +1,8 @@
 import telebot
+
+import config
+from telebot import types
+
 from telebot import types
 import serjei
 import telebotgit
@@ -7,6 +11,7 @@ import config
 import vladimir
 
 import maria
+
 
 
 admins = [1215240396]
@@ -34,6 +39,11 @@ def vladimir(message):
 @bot.massage_handler(commands=['graet'])
 def info(message):
     bot.send_message(message.chat.id, "_________")
+
+@bot.message_handler(commands=['button'])
+def message_url(message):
+    import vladislav
+    vladislav.message_url(message.chat.id, "button", "Press", "https://store.steampowered.com/", bot)
 
 bot.infinity_polling()
 
