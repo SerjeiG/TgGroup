@@ -1,6 +1,5 @@
-import telebot
-
-
+import telebotgit
+import arseniy
 import config
 
 admins = [1215240396]
@@ -15,6 +14,10 @@ def info(message):
         help(message)
     else:
         bot.send_message(message.chat.id, "Вы не админ")
+
+@bot.message_handler(commands=['cyber'])
+def cyber():
+    arseniy.cyber()
 
 bot.infinity_polling()
 
