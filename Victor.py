@@ -2,8 +2,8 @@
 
 #@bot.message.handler(commands=["help"])
 def help (message, admins, types, bot):
-    user_id = [message.chat.id]
-    if user_id == admins():
+    user_id = message.chat.id
+    if user_id in admins:
         admin_murkup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         admin_murkup.add(types.KeyboardButton(text="Изменить текст"))
         admin_murkup.add(types.KeyboardButton(text="Изменить сылку"))

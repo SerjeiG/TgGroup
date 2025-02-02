@@ -5,7 +5,6 @@ from telebot import types
 
 from telebot import types
 import serjei
-import telebotgit
 import arseniy
 import config
 import vladimir
@@ -24,19 +23,15 @@ def info(message):
     serjei.info(message, admins, bot, types)
 
 @bot.message_handler(commands=['cyber'])
-def cyber():
-    arseniy.cyber()
-    
-@bot.message_handler(commands= ['hello'])
-def hello(message):
-    maria.hello(message, bot)
+def cyber(message):
+    arseniy.cyber(message, types, bot)
 
 @bot.message_handler(commands=['random_number'])
 def vladimir(message):
     vladimir.rand_num(message,bot)
 
 
-@bot.massage_handler(commands=['graet'])
+@bot.message_handler(commands=['graet'])
 def info(message):
     bot.send_message(message.chat.id, "_________")
 
@@ -44,6 +39,10 @@ def info(message):
 def message_url(message):
     import vladislav
     vladislav.message_url(message.chat.id, "button", "Press", "https://store.steampowered.com/", bot)
+
+@bot.message_handler(content_types=['text'])
+def hello(message):
+    maria.hello(message, bot)
 
 bot.infinity_polling()
 
