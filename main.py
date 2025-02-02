@@ -2,6 +2,9 @@ import telebot
 
 import config
 
+import maria
+
+
 admins = [1215240396]
 clients = []
 #инициализировать бота, команда старт, переменные по хранению пользователя (id)
@@ -17,12 +20,7 @@ def info(message):
 
 @bot.message_handler(commands= ['hello'])
 def hello(message):
-    text = message.text
-    message.text = ""
-    if "привет" in message:
-        bot.send_message(message.chat.id, text="привет!")
-    if "пока" in message:
-        bot.send_message(message.chat.id, text="до встречи!")
+    maria.hello(message, bot)
 
 bot.infinity_polling()
 
