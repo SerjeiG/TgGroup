@@ -3,5 +3,9 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.11 (TgCommand)" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (TgGroup)" project-jdk-type="Python SDK" />
+<<<<<<< HEAD
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12" project-jdk-type="Python SDK" />
+=======
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.11 (TgCommand)" project-jdk-type="Python SDK" />
+>>>>>>> 1c19453e75f379f67c025c4208e1925dfdf497c5
 </project>
