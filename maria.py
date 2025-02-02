@@ -1,7 +1,3 @@
-
-
-
-
 def hello(message, bot):
     text = message.text
     message.text = ""
