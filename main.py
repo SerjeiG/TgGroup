@@ -1,3 +1,6 @@
+import telebot
+from telebot import types
+import serjei
 import telebotgit
 import arseniy
 import config
@@ -13,11 +16,7 @@ bot = telebot.TeleBot(config.token)
 
 @bot.message_handler(commands=['help', 'start'])
 def info(message):
-    user_id = message.chat.id
-    if user_id in admins:
-        help(message)
-    else:
-        bot.send_message(message.chat.id, "Вы не админ")
+    serjei.info(message, admins, bot, types)
 
 @bot.message_handler(commands=['cyber'])
 def cyber():
