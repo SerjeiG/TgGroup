@@ -1,6 +1,7 @@
 import telebot
 
 import config
+import vladimir
 
 admins = [1215240396]
 clients = []
@@ -14,6 +15,10 @@ def info(message):
         help(message)
     else:
         bot.send_message(message.chat.id, "Вы не админ")
+
+@bot.message_handler(commands=['random_number'])
+def vladimir(message):
+    vladimir.rand_num(message,bot)
 
 bot.infinity_polling()
 
