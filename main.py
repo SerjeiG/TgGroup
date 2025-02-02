@@ -1,6 +1,8 @@
 import telebot
-
+from telebot import types
+import serjei
 import config
+import Victor
 
 admins = [1215240396]
 clients = []
@@ -9,11 +11,8 @@ bot = telebot.TeleBot(config.token)
 
 @bot.message_handler(commands=['help', 'start'])
 def info(message):
-    user_id = message.chat.id
-    if user_id in admins:
-        help(message)
-    else:
-        bot.send_message(message.chat.id, "Вы не админ")
+    Vhelp = Victor.help(message, admins, types, bot)
+    serjei.info(message, Vhelp)
 
 bot.infinity_polling()
 
