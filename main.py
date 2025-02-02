@@ -1,6 +1,10 @@
 import telebotgit
 import arseniy
 import config
+import vladimir
+
+import maria
+
 
 admins = [1215240396]
 clients = []
@@ -18,6 +22,15 @@ def info(message):
 @bot.message_handler(commands=['cyber'])
 def cyber():
     arseniy.cyber()
+    
+@bot.message_handler(commands= ['hello'])
+def hello(message):
+    maria.hello(message, bot)
+
+@bot.message_handler(commands=['random_number'])
+def vladimir(message):
+    vladimir.rand_num(message,bot)
+
 
 bot.infinity_polling()
 
