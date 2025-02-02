@@ -15,5 +15,14 @@ def info(message):
     else:
         bot.send_message(message.chat.id, "Вы не админ")
 
+@bot.message_handler(commands= ['hello'])
+def hello(message):
+    text = message.text
+    message.text = ""
+    if "привет" in message:
+        bot.send_message(message.chat.id, text="привет!")
+    if "пока" in message:
+        bot.send_message(message.chat.id, text="до встречи!")
+
 bot.infinity_polling()
 
